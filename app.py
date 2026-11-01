@@ -200,13 +200,13 @@ st.markdown("""
 /* Selected value inside dropdown */
 [data-testid="stSelectbox"] div[data-baseweb="select"] > div {
     background-color: #252832 !important;
-    color: #ffffff !important;
+    color: white !important;
     border-color: #414957 !important;
 }
 
 /* Selected text */
 [data-testid="stSelectbox"] div[data-baseweb="select"] span {
-    color: #ffffff !important;
+    color: white !important;
     -webkit-text-fill-color: #ffffff !important;
 }
 
