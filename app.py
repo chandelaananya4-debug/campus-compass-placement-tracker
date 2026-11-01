@@ -44,48 +44,109 @@ df = st.session_state.records_df
 st.markdown("""
 <style>
 
-/* Main dashboard text */
+
+
+
+/* ===== CAMPUS COMPASS: CLEAN DASHBOARD THEME ===== */
+
 .stApp {
+    background: #f4f7fc !important;
     color: #172b4d !important;
+    font-family: "Segoe UI", sans-serif;
 }
 
-/* KPI cards */
+/* Default text */
+.stApp p,
+.stApp label,
+.stApp li,
+.stApp span {
+    color: inherit;
+}
+
+/* HERO HEADER */
+.hero {
+    background: linear-gradient(115deg, #101d39 0%, #274f7d 100%);
+    padding: 36px 40px;
+    border-radius: 28px;
+    margin-bottom: 22px;
+}
+
+/* Main title */
+.hero h1 {
+    color: #ffffff !important;
+    font-size: 46px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    margin: 0 0 18px 0;
+}
+
+/* Hero description */
+.hero p {
+    color: #dbeafe !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+/* KPI CARDS */
 [data-testid="stMetric"] {
-    background-color: #ffffff !important;
-    border: 1px solid #dbe5f1;
-    border-radius: 18px;
-    padding: 18px;
+    background: #ffffff !important;
+    border: 1px solid #e1e8f2 !important;
+    border-radius: 20px !important;
+    padding: 20px !important;
+    box-shadow: 0 4px 16px rgba(22, 43, 77, 0.05);
 }
 
-/* Metric labels */
+/* KPI labels */
 [data-testid="stMetricLabel"],
 [data-testid="stMetricLabel"] p {
-    color: #475569 !important;
+    color: #52627a !important;
+    opacity: 1 !important;
 }
 
-/* Metric numbers */
+/* KPI values */
 [data-testid="stMetricValue"],
 [data-testid="stMetricValue"] div {
+    color: #14284b !important;
+    opacity: 1 !important;
+    font-weight: 750 !important;
+}
+
+/* Section headings */
+.stApp h1:not(.hero h1),
+.stApp h2,
+.stApp h3 {
+    color: #172b4d !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+/* Tables */
+[data-testid="stDataFrame"],
+[data-testid="stTable"] {
+    background: #ffffff !important;
+    border-radius: 12px;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background: #edf2fa !important;
+}
+
+/* Inputs */
+.stApp input,
+.stApp textarea {
     color: #172b4d !important;
 }
 
-/* Headings */
-h1, h2, h3 {
-    color: #172b4d !important;
+/* Buttons */
+.stApp button {
+    font-weight: 600;
 }
 
-/* Normal text */
-.stMarkdown p,
-.stCaption {
-    color: #475569;
-}
-
-.stApp {background: #f5f7fb;}
-.hero {padding: 1.5rem 1.7rem; border-radius: 20px;
-background: linear-gradient(115deg,#101b35,#244b78); color:white; margin-bottom:1rem;}
-.hero h1 {color:white; margin:0;}
-.hero p {color:#c9daf3; margin:.45rem 0 0;}
-div[data-testid="stMetric"] {background:white;padding:16px;border:1px solid #e6ebf3;border-radius:14px;}
 </style>
 <div class="hero">
 <h1>🎓 Campus Compass</h1>
