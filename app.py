@@ -195,6 +195,50 @@ st.markdown("""
     border-color: #354765 !important;
 }
 
+/* ===== FIX DEPARTMENT / SELECTBOX TEXT COLOR ===== */
+
+/* Selected value inside dropdown */
+[data-testid="stSelectbox"] div[data-baseweb="select"] > div {
+    background-color: #252832 !important;
+    color: #ffffff !important;
+    border-color: #414957 !important;
+}
+
+/* Selected text */
+[data-testid="stSelectbox"] div[data-baseweb="select"] span {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Dropdown arrow */
+[data-testid="stSelectbox"] svg {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+}
+
+/* Open dropdown menu */
+[data-baseweb="popover"] ul {
+    background-color: #252832 !important;
+}
+
+/* Dropdown options */
+[data-baseweb="popover"] li {
+    background-color: #252832 !important;
+    color: #ffffff !important;
+}
+
+/* Hover option */
+[data-baseweb="popover"] li:hover {
+    background-color: #274f7d !important;
+    color: #ffffff !important;
+}
+
+/* Dropdown option text */
+[data-baseweb="popover"] li * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
 
 </style>
 <div class="hero">
