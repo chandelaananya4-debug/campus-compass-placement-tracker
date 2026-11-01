@@ -147,6 +147,55 @@ st.markdown("""
     font-weight: 600;
 }
 
+/* ===== DARK NAVIGATION SIDEBAR ===== */
+
+[data-testid="stSidebar"] {
+    background: #101d39 !important;
+    border-right: 1px solid #263b5d !important;
+}
+
+/* Sidebar text */
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] li,
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: #eaf1ff !important;
+    opacity: 1 !important;
+}
+
+/* Sidebar navigation options */
+[data-testid="stSidebar"] [role="radiogroup"] label {
+    background: transparent !important;
+    border-radius: 10px !important;
+    padding: 6px 10px !important;
+}
+
+/* Navigation hover */
+[data-testid="stSidebar"] [role="radiogroup"] label:hover {
+    background: #20385e !important;
+}
+
+/* Selected navigation option */
+[data-testid="stSidebar"] [role="radiogroup"] label:has(input:checked) {
+    background: #274f7d !important;
+    border: 1px solid #507eb5 !important;
+}
+
+/* Sidebar inputs */
+[data-testid="stSidebar"] input,
+[data-testid="stSidebar"] textarea {
+    color: #ffffff !important;
+}
+
+/* Sidebar divider */
+[data-testid="stSidebar"] hr {
+    border-color: #354765 !important;
+}
+
+
 </style>
 <div class="hero">
 <h1>🎓 Campus Compass</h1>
