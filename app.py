@@ -44,10 +44,7 @@ df = st.session_state.records_df
 st.markdown("""
 <style>
 
-
-
-
-/* ===== CAMPUS COMPASS: CLEAN DASHBOARD THEME ===== */
+/* ===== CAMPUS COMPASS: COMPLETE DASHBOARD THEME ===== */
 
 .stApp {
     background: #f4f7fc !important;
@@ -55,23 +52,15 @@ st.markdown("""
     font-family: "Segoe UI", sans-serif;
 }
 
-/* Default text */
-.stApp p,
-.stApp label,
-.stApp li,
-.stApp span {
-    color: inherit;
-}
-
-/* HERO HEADER */
+/* ===== HERO HEADER ===== */
 .hero {
     background: linear-gradient(115deg, #101d39 0%, #274f7d 100%);
     padding: 36px 40px;
     border-radius: 28px;
     margin-bottom: 22px;
+    color: #ffffff !important;
 }
 
-/* Main title */
 .hero h1 {
     color: #ffffff !important;
     font-size: 46px !important;
@@ -82,7 +71,6 @@ st.markdown("""
     margin: 0 0 18px 0;
 }
 
-/* Hero description */
 .hero p {
     color: #dbeafe !important;
     font-size: 18px !important;
@@ -91,7 +79,7 @@ st.markdown("""
     text-shadow: none !important;
 }
 
-/* KPI CARDS */
+/* ===== KPI CARDS ===== */
 [data-testid="stMetric"] {
     background: #ffffff !important;
     border: 1px solid #e1e8f2 !important;
@@ -100,14 +88,12 @@ st.markdown("""
     box-shadow: 0 4px 16px rgba(22, 43, 77, 0.05);
 }
 
-/* KPI labels */
 [data-testid="stMetricLabel"],
 [data-testid="stMetricLabel"] p {
     color: #52627a !important;
     opacity: 1 !important;
 }
 
-/* KPI values */
 [data-testid="stMetricValue"],
 [data-testid="stMetricValue"] div {
     color: #14284b !important;
@@ -115,7 +101,7 @@ st.markdown("""
     font-weight: 750 !important;
 }
 
-/* Section headings */
+/* ===== HEADINGS ===== */
 .stApp h1:not(.hero h1),
 .stApp h2,
 .stApp h3 {
@@ -124,37 +110,19 @@ st.markdown("""
     text-shadow: none !important;
 }
 
-/* Tables */
+/* ===== TABLES ===== */
 [data-testid="stDataFrame"],
 [data-testid="stTable"] {
     background: #ffffff !important;
     border-radius: 12px;
 }
 
-/* Sidebar */
-[data-testid="stSidebar"] {
-    background: #edf2fa !important;
-}
-
-/* Inputs */
-.stApp input,
-.stApp textarea {
-    color: #172b4d !important;
-}
-
-/* Buttons */
-.stApp button {
-    font-weight: 600;
-}
-
-/* ===== DARK NAVIGATION SIDEBAR ===== */
-
+/* ===== DARK SIDEBAR ===== */
 [data-testid="stSidebar"] {
     background: #101d39 !important;
     border-right: 1px solid #263b5d !important;
 }
 
-/* Sidebar text */
 [data-testid="stSidebar"] p,
 [data-testid="stSidebar"] span,
 [data-testid="stSidebar"] label,
@@ -166,78 +134,118 @@ st.markdown("""
     opacity: 1 !important;
 }
 
-/* Sidebar navigation options */
 [data-testid="stSidebar"] [role="radiogroup"] label {
     background: transparent !important;
     border-radius: 10px !important;
     padding: 6px 10px !important;
 }
 
-/* Navigation hover */
 [data-testid="stSidebar"] [role="radiogroup"] label:hover {
     background: #20385e !important;
 }
 
-/* Selected navigation option */
 [data-testid="stSidebar"] [role="radiogroup"] label:has(input:checked) {
     background: #274f7d !important;
     border: 1px solid #507eb5 !important;
 }
 
-/* Sidebar inputs */
-[data-testid="stSidebar"] input,
-[data-testid="stSidebar"] textarea {
-    color: #ffffff !important;
-}
-
-/* Sidebar divider */
 [data-testid="stSidebar"] hr {
     border-color: #354765 !important;
 }
 
-/* ===== FIX DEPARTMENT / SELECTBOX TEXT COLOR ===== */
-
-/* Selected value inside dropdown */
-[data-testid="stSelectbox"] div[data-baseweb="select"] > div {
+/* ===== TEXT INPUTS: SEARCH / NAME / ID ===== */
+.stApp [data-testid="stTextInput"] input,
+.stApp [data-testid="stNumberInput"] input,
+.stApp [data-testid="stTextArea"] textarea {
     background-color: #252832 !important;
-    color: white !important;
-    border-color: #414957 !important;
-}
-
-/* Selected text */
-[data-testid="stSelectbox"] div[data-baseweb="select"] span {
-    color: white !important;
+    color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
+    border: 1px solid #414957 !important;
+    border-radius: 10px !important;
+    opacity: 1 !important;
 }
 
-/* Dropdown arrow */
-[data-testid="stSelectbox"] svg {
+/* Input placeholder */
+.stApp [data-testid="stTextInput"] input::placeholder,
+.stApp [data-testid="stTextArea"] textarea::placeholder {
+    color: #c0c9d8 !important;
+    -webkit-text-fill-color: #c0c9d8 !important;
+    opacity: 1 !important;
+}
+
+/* ===== SELECTBOX / DROPDOWN ===== */
+
+/* Dropdown closed state */
+.stApp [data-testid="stSelectbox"] [data-baseweb="select"] > div {
+    background-color: #252832 !important;
+    border-color: #414957 !important;
+    color: #ffffff !important;
+}
+
+/* Selected value */
+.stApp [data-testid="stSelectbox"] [data-baseweb="select"] span {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* Selectbox input / searchable text */
+.stApp [data-testid="stSelectbox"] input {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
+    background-color: transparent !important;
+}
+
+/* Dropdown arrow and icons */
+.stApp [data-testid="stSelectbox"] svg {
     fill: #ffffff !important;
     color: #ffffff !important;
+    opacity: 1 !important;
 }
 
-/* Open dropdown menu */
-[data-baseweb="popover"] ul {
+/* Dropdown popup */
+[data-baseweb="popover"] [role="listbox"] {
     background-color: #252832 !important;
 }
 
-/* Dropdown options */
-[data-baseweb="popover"] li {
+/* Dropdown choices */
+[data-baseweb="popover"] [role="option"] {
     background-color: #252832 !important;
-    color: #ffffff !important;
-}
-
-/* Hover option */
-[data-baseweb="popover"] li:hover {
-    background-color: #274f7d !important;
     color: #ffffff !important;
 }
 
 /* Dropdown option text */
-[data-baseweb="popover"] li * {
+[data-baseweb="popover"] [role="option"] *,
+[data-baseweb="popover"] [role="option"] span {
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
 }
+
+/* Hover / focused option */
+[data-baseweb="popover"] [role="option"]:hover,
+[data-baseweb="popover"] [role="option"][aria-selected="true"] {
+    background-color: #274f7d !important;
+    color: #ffffff !important;
+}
+
+/* ===== LABELS ===== */
+.stApp [data-testid="stTextInput"] label,
+.stApp [data-testid="stSelectbox"] label,
+.stApp [data-testid="stNumberInput"] label,
+.stApp [data-testid="stTextArea"] label {
+    color: #172b4d !important;
+}
+
+/* ===== BUTTONS ===== */
+.stApp button {
+    font-weight: 600;
+}
+
+
+
+
 
 
 </style>
