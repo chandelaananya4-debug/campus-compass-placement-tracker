@@ -43,6 +43,43 @@ df = st.session_state.records_df
 # --- Header ---
 st.markdown("""
 <style>
+
+/* Main dashboard text */
+.stApp {
+    color: #172b4d !important;
+}
+
+/* KPI cards */
+[data-testid="stMetric"] {
+    background-color: #ffffff !important;
+    border: 1px solid #dbe5f1;
+    border-radius: 18px;
+    padding: 18px;
+}
+
+/* Metric labels */
+[data-testid="stMetricLabel"],
+[data-testid="stMetricLabel"] p {
+    color: #475569 !important;
+}
+
+/* Metric numbers */
+[data-testid="stMetricValue"],
+[data-testid="stMetricValue"] div {
+    color: #172b4d !important;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #172b4d !important;
+}
+
+/* Normal text */
+.stMarkdown p,
+.stCaption {
+    color: #475569;
+}
+
 .stApp {background: #f5f7fb;}
 .hero {padding: 1.5rem 1.7rem; border-radius: 20px;
 background: linear-gradient(115deg,#101b35,#244b78); color:white; margin-bottom:1rem;}
